@@ -27,16 +27,20 @@ public class NguoiDung {
                     SinhVien s1 = new SinhVien(a, b, c, d, e);
                     quanLiSinhVien.addSinhvien(s1);
                     break;
-               case 2:
+                case 2:
                     System.out.println("xoa sinh vien co id : ");
                     int f = sc.nextInt();
                     quanLiSinhVien.deleteStudent(f);
                     break;
-                case 4 :
+                case 3:
+                    System.out.println("sua sinh vien co id : ");
+                    int g = sc.nextInt();
+                    quanLiSinhVien.fixstudent(g);
+                case 4:
                     quanLiSinhVien.showStudent();
 
             }
-        }while (true);
+        } while (true);
     }
 }
 

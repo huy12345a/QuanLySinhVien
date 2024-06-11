@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class QuanLiSinhVien {
     protected SinhVien[] liststudent;
     protected int limit;
@@ -45,5 +47,36 @@ public class QuanLiSinhVien {
         }
         liststudent = newlist;
         this.size--;
+    }
+    public SinhVien getStudentById(int id) {
+        for (int i = 0; i < this.size; i++) {
+            if (this.liststudent[i].getId() == id) {
+                return this.liststudent[i];
+            }
+        }
+        return null;
+    }
+    public void fixstudent(int id) {
+        int index = -1;
+        for (int i = 0; i < this.size; i++) {
+            if (this.liststudent[i].getId() == id) {
+                index = i;
+            }
+        }
+        if (index != -1) {
+            System.out.println("new name : ");
+            Scanner sc = new Scanner(System.in);
+            String newname = sc.next();
+            liststudent[index].setName(newname);
+            System.out.println("new email :");
+            String newemail = sc.next();
+            liststudent[index].setEmail(newemail);
+            System.out.println("new phone :");
+            String newphone = sc.next();
+            liststudent[index].setPhone(newphone);
+            System.out.println("new GPA :");
+            int newGPA = sc.nextInt();
+            liststudent[index].setGPA(newGPA);
+        }
     }
 }
