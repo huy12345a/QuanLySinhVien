@@ -25,9 +25,9 @@ public class QuanLiSinhVien {
     }
 
     public void deleteStudent(int id) {
-        SinhVien[] newlist = new SinhVien[this.size - 1]; // Tạo một mảng mới với kích thước nhỏ hơn một phần tử
+        SinhVien[] newlist = new SinhVien[this.size - 1];
 
-        int vitri = -1; // Khởi tạo là -1, trong trường hợp không tìm thấy ID
+        int vitri = -1;
         for (int i = 0; i < this.size; i++) {
             if (liststudent[i].getId() == id) {
                 vitri = i;
